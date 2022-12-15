@@ -32,7 +32,8 @@ width: 22px;
 
   position: absolute;
   right: 20px;
-  transform: ${({togle})=>togle ? 'rotateX(150deg)' : 'rotateX(0deg)'};
+  top:15px;
+  transform: ${({togle})=>togle ? 'rotateX(180deg)' : 'rotateX(0deg)'};
   transition: transform 0.3s;
 `;
 
@@ -84,6 +85,7 @@ width: 22px;
 `;
 
 Container.Title = styled.div`
+cursor: pointer;
 visibility:${({togle})=>togle && 'hidden'};
 font-style: normal;
 font-weight: 500;
@@ -98,6 +100,7 @@ margin:0 0 0 70px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    
  `;
 
 Container.Item = styled.div`
@@ -114,11 +117,12 @@ cursor:pointer;
 export const Item = styled.div`
 padding:0 0 0 30px;
 width: 100%;
-height: 50px;
+min-height: 50px;
 display: flex;
 flex-direction: column;
 justify-content: center;
 position: relative;
+
 :hover{
 background-color: #1677ff;
 
@@ -135,7 +139,6 @@ background-color: #1677ff;
 
 Item.Child = styled.div`
 
-padding:0 0 0 30px;
 width: 100%;
 min-height: 50px;
 display: flex;
@@ -158,8 +161,17 @@ background-color: #1677ff;
 `;
 
 Item.ChildContainer = styled.div`
-border:1px solid #fff;
+border:${({view})=>view ? '1px solid #fff':'' };
 width: 100%;
-height: ${({view})=>view ? '80%' : '0px'};
-transition: height 0.3s;
+display:${({view})=>view ? 'flex':'block' };
+align-items: center;
+height: ${({view})=>view ? '40px':'0px' };
+
+-webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+
+
 `;

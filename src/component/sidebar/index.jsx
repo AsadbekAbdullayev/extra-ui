@@ -23,7 +23,32 @@ const SidebarData = [
     path:'/Заказы',
     name:'Заказы',
     Icons:Zak,
-    child:[],
+    child:[
+      {
+        id:15,
+        path:'/Оформить child',
+        name:'menu 1',
+        // Icons:Kor,
+        menu:[
+        ],
+      },
+      {
+        id:15,
+        path:'/Оформить menu',
+        name:'menu 2',
+        // Icons:Kor,
+        menu:[
+        ],
+      },
+      {
+        id:15,
+        path:'/Оформить menu',
+        name:'menu 3',
+        // Icons:Kor,
+        child:[
+        ],
+      },
+    ],
   },
   {
     id:3,
@@ -92,20 +117,20 @@ const callFunc = () =>{
     const { Icons, name,child } = prop;
     return !child?.length ? (<Item onClick={()=>{name == 'Главная' && callFunc()}}>
   <Icons style={{margin:'0  37px'}} className='iconSidebar'/> <Container.Title className='Title' togle={togle}>{name}</Container.Title>
-</Item>) : (<Item.Child  onClick={()=>setTogleChild(!togleChild)} view={togleChild}>
-  <Icons style={{margin:'0  37px'}} className='iconSidebar'/> <Container.Title className='Title'  togle={togle}>{name}</Container.Title>  <Icon.Arrow togle={togleChild} icon={togleIcon}/>
+</Item>) 
+
+
+: (<Item  onClick={()=>setTogleChild(!togleChild)} view={togleChild}>
+<Item.Child>  <Icons style={{margin:'0  37px'}} className='iconSidebar'/> <Container.Title className='Title'  togle={togle}>{name}</Container.Title>  <Icon.Arrow togle={togleChild} icon={togleIcon}/></Item.Child>
   { 
-    <Item.ChildContainer view={togleChild}> {
     child?.map(({name})=>{
-      return togleChild && (
- <Container.Title className='Title' togle={togle} style={{margin:'10px 80px'}}>{name}</Container.Title> 
-
+      return(
+        <Item.ChildContainer view={togleChild} >{ togleChild && <Container.Title className='Title' togle={togle} style={{margin:'0  85px'}}>{name}</Container.Title>} </Item.ChildContainer>
       )
-
-    })}
-    </Item.ChildContainer>
+    })
+    
   }
-</Item.Child>);
+</Item>);
 
 }
       )
