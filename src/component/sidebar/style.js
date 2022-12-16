@@ -18,6 +18,22 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-end;
+overflow-y: auto;
+
+&::-webkit-scrollbar {
+	background-color: #F5F5F5;
+    }
+
+  &::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: #F5F5F5;
+}  
+
+&::-webkit-scrollbar-thumb
+{
+	background-color: #555;
+}
 `;
 
 export const Icon = styled.div``;
@@ -93,7 +109,7 @@ font-size: 16px;
 line-height: 19px;
 letter-spacing: -0.3px;
 color: ${({ color }) => color ? color  : '#fff'};
-margin:0 0 0 70px;
+margin:0 0 0 45px;
  -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -129,6 +145,7 @@ background-color: #1677ff;
 .Title{
     
     color:#000;
+    /* border-bottom:1px solid #fff; */
   }
 }
 
@@ -161,7 +178,7 @@ background-color: #1677ff;
 `;
 
 Item.ChildContainer = styled.div`
-border:${({view})=>view ? '1px solid #fff':'' };
+/* border:${({view})=>view ? '1px solid #fff':'' }; */
 width: 100%;
 display:${({view})=>view ? 'flex':'block' };
 align-items: center;
@@ -173,5 +190,7 @@ height: ${({view})=>view ? '40px':'0px' };
   -ms-transition: all 0.3s;
   transition: all 0.3s;
 
-
+:hover{
+  background-color: #fff;
+}
 `;
