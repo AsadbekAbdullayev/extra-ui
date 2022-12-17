@@ -43,13 +43,40 @@ const SidebarData = [
         child:[
         ],
       },
+      {
+        id:15,
+        path:'/Оформить child',
+        name:'menu 1',
+        menu:[
+        ],
+      },
+      {
+        id:15,
+        path:'/Оформить menu',
+        name:'menu 2',
+        menu:[
+        ],
+      },
+      {
+        id:15,
+        path:'/Оформить menu',
+        name:'menu 3',
+        child:[
+        ],
+      },
     ],
   },
   {
     id:3,
     path:'/Menu',
     name:'Menu',
-    child:[],
+    child:[{
+      id:15,
+      path:'/Оформить menu',
+      name:'menu 3',
+      child:[
+      ],
+    },],
   },
   {
     id:5,
@@ -256,7 +283,7 @@ if(id === clickId){
 </Item>) 
 
 
-: (<Item  onClick={()=>openSubmenu(id)} view={clickId === id}>
+: (<Item.Child  onClick={()=>openSubmenu(id)} view={clickId === id} style={{border:'1px solid #fff'}}>
 <Item.Child>   <Container.Title className='Title'  togle={togle}>{name}</Container.Title>  <Icon.Arrow togle={clickId === id} /></Item.Child>
   { 
     child?.map(({name})=>{
@@ -266,7 +293,7 @@ if(id === clickId){
     })
     
   }
-</Item>);
+</Item.Child>);
 
 }
       )

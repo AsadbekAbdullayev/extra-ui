@@ -157,7 +157,6 @@ background-color: #1677ff;
 Item.Child = styled.div`
 
 width: 100%;
-min-height: 50px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -166,7 +165,6 @@ position: relative;
 background-color: #1677ff;
 
 .Title{
-    
     color:#000;
   }
 }
@@ -175,6 +173,9 @@ background-color: #1677ff;
   position: absolute;
 }
 
+height: ${({view})=>view ? '100%':'50px'};
+
+transition: all 0.3s;
 `;
 
 Item.ChildContainer = styled.div`
