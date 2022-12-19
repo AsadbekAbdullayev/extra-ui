@@ -9,7 +9,13 @@ import {SidebarData} from '../../utils/sidebsrView';
 import {
   useNavigate
 } from "react-router-dom";
-export default function SidebarComponent(props) {
+export default function SidebarComponent() {
+
+  // Input: l1 = [2,4,3], l2 = [5,6,4]
+  // Output: [7,0,8]
+
+
+
 
 
 let navigate = useNavigate();
@@ -38,8 +44,8 @@ if(id === clickId){
      {
       SidebarData?.map((prop)=>
    {  
-    const { Icons, name,child,id } = prop;
-    return !child?.length ? (<Item onClick={()=>{name === 'Button' ? callFunc(name) :openSubmenu(id,name)}}>
+    const {  name,child,id } = prop;
+    return !child?.length ? (<Item onClick={()=>{openSubmenu(id,name)}} view={clickId === id}>
    <Container.Title className='Title' togle={togle}>{name}</Container.Title>
 </Item>) 
 

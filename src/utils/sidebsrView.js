@@ -20,99 +20,26 @@ export const SidebarData = [
       path:'/Dropdown',
       name:'Dropdown',
       child:[
-        {
-          id:15,
-          path:'/Оформить child',
-          name:'menu 1',
-          menu:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить menu',
-          name:'menu 2',
-          menu:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить menu',
-          name:'menu 3',
-          child:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить child',
-          name:'menu 1',
-          menu:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить menu',
-          name:'menu 2',
-          menu:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить menu',
-          name:'menu 3',
-          child:[
-          ],
-          component: Button,
-        },
+        
       ],
     },
     {
       id:3,
       path:'/Menu',
       name:'Menu',
-      child:[{
-        id:15,
-        path:'/Оформить menu',
-        name:'menu 3',
-        child:[
-        ],
-        component: Button,
-      },],
+      child:[],
+      component: Button,
+
     },
     {
-      id:5,
+      id:51,
       path:'/Pagination',
       name:'Pagination',
       child:[
-        {
-          id:15,
-          path:'/Оформить child',
-          name:'child 1',
-          child:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить child',
-          name:'child 2',
-          child:[
-          ],
-          component: Button,
-        },
-        {
-          id:15,
-          path:'/Оформить child',
-          name:'child 3',
-          child:[
-          ],
-          component: Button,
-        },
+       
       ],
+      component: Button,
+
     },
     {
       id:4,
