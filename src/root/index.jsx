@@ -1,19 +1,18 @@
 
 import '../App.css';
-import Asosiy from '../component/Asosiy';
 import {
   Routes,
   Route,
 } from "react-router-dom";
 import { SidebarData } from '../utils/sidebsrView';
 import Button from '../component/Button';
+import Asosiy from '../component/Asosiy';
 
 function App() {
   return (
-    <div style={{height:'100%'}}>
 <Routes>
       <Route path="/" element={<Asosiy />}>
-      <Route path="/Steps" element={<Button />}/>
+      <Route path="/Button" element={<Button />}/>
 
         {
             SidebarData?.map(({path,component})=>
@@ -23,10 +22,7 @@ function App() {
             )
         }
       </Route>
-        
-
     </Routes>
-    </div>
   );
 }
 

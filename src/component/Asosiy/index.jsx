@@ -1,14 +1,18 @@
 import React from 'react'
 import Sidebar from '../sidebar'
-import { ReactComponent as Home } from '../../assets/icon/Home.svg';
 import {
   Outlet,
 } from "react-router-dom";
+import Navbar from '../Navbar';
+
 export default function Asosiy() {
   return (
-    <div style={{display:'flex'}}>
-        <Sidebar icon={Home}/>
+    <div>
+      <Navbar/>
+      <div style={{display:'flex'}}>
+        <Sidebar />
             <Outlet/>
+      </div>
     </div>
   )
 }

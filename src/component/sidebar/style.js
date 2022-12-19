@@ -11,8 +11,9 @@ import { ReactComponent as Arrow } from '../../assets/icon/arrowUp.svg';
 export const Container = styled.div`
  width: ${({width})=>width || '263px'};
  transition: width 0.2s;
- height: 100vh;
- background-color: #001529;
+ height: 890px;
+ 
+ /* background-color: #001529; */
 /* border-radius: 0px 30px 0px 0px; */
 /* padding:50px 0px 50px 30px; */
 display: flex;
@@ -22,18 +23,22 @@ overflow-y: auto;
 
 &::-webkit-scrollbar {
 	background-color: #F5F5F5;
+  display: none;
     }
 
   &::-webkit-scrollbar
 {
 	width: 4px;
+  display: none;
 	background-color: #F5F5F5;
 }  
 
 &::-webkit-scrollbar-thumb
 {
+  display: none;
 	background-color: #555;
 }
+border-right:1px solid #bae0ff;
 `;
 
 export const Icon = styled.div``;
@@ -133,14 +138,23 @@ cursor:pointer;
 export const Item = styled.div`
 padding:0 0 0 30px;
 width: 100%;
-min-height: 50px;
+min-height: 40px;
 display: flex;
 flex-direction: column;
 justify-content: center;
 position: relative;
+border-radius: 7px;
+margin: 5px;
+background-color: ${({view})=>view && '#bae0ff'};
+transition: all 0.3s;
+
+.Title{
+color: ${({view})=>view && '#000'};
+    
+  }
 
 :hover{
-background-color: #1677ff;
+background-color: #ccc;
 
 .Title{
     
