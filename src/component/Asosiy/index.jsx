@@ -11,7 +11,10 @@ export default function Asosiy() {
       <Navbar/>
       <div style={{display:'flex'}}>
         <Sidebar />
-            <Outlet/>
+        <div style={{padding:'0 64px 32px 64px',width:'100%'}}>
+
+            <Outlet />
+        </div>
       </div>
     </div>
   )

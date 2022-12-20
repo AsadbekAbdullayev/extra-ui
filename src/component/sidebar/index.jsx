@@ -40,18 +40,18 @@ if(id === clickId){
 
 
   return (
-    <Container  width={togle ? '100px' : '263px'} className='style-1'>
+    <Container  width={togle ? '100px' : '330px'} className='style-1'>
      {
       SidebarData?.map((prop)=>
    {  
     const {  name,child,id } = prop;
     return !child?.length ? (<Item onClick={()=>{openSubmenu(id,name)}} view={clickId === id}>
-   <Container.Title className='Title' togle={togle}>{name}</Container.Title>
+   <Container.Title className='Title' togle={clickId === id}>{name}</Container.Title>
 </Item>) 
 
 
 : (<Item.Child  onClick={()=>openSubmenu(id,name)} view={clickId === id} style={{border:'1px solid #fff'}}>
-<Item.Child>   <Container.Title className='Title'  togle={togle}>{name}</Container.Title>  <Icon.Arrow togle={clickId === id} /></Item.Child>
+<Item.Child>   <Container.Title className='Title'  togle={clickId === id}>{name}</Container.Title>  <Icon.Arrow togle={clickId === id} /></Item.Child>
   { 
     child?.map(({name})=>{
       return(

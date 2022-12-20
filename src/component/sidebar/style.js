@@ -11,7 +11,7 @@ import { ReactComponent as Arrow } from '../../assets/icon/arrowUp.svg';
 export const Container = styled.div`
  width: ${({width})=>width || '263px'};
  transition: width 0.2s;
- height: 890px;
+ height: 870px;
  
  /* background-color: #001529; */
 /* border-radius: 0px 30px 0px 0px; */
@@ -38,7 +38,7 @@ overflow-y: auto;
   display: none;
 	background-color: #555;
 }
-border-right:1px solid #bae0ff;
+border-right:1px solid #f0f0f0;
 `;
 
 export const Icon = styled.div``;
@@ -107,21 +107,21 @@ width: 22px;
 
 Container.Title = styled.div`
 cursor: pointer;
-visibility:${({togle})=>togle && 'hidden'};
+/* visibility:${({togle})=>togle && 'hidden'}; */
 font-style: normal;
-font-weight: 500;
+font-weight: 400;
 font-size: 16px;
 line-height: 19px;
 letter-spacing: -0.3px;
-color: ${({ color }) => color ? color  : '#fff'};
-margin:0 0 0 45px;
+color: ${({ color }) => color ? color  : '#61dafb'};
+margin:${({togle})=>togle && '0 0 0 20px'};
  -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    
+    transition: all 0.2s;
  `;
 
 Container.Item = styled.div`
@@ -137,7 +137,7 @@ cursor:pointer;
 
 export const Item = styled.div`
 padding:0 0 0 30px;
-width: 100%;
+width: 85%;
 min-height: 40px;
 display: flex;
 flex-direction: column;
@@ -145,27 +145,23 @@ justify-content: center;
 position: relative;
 border-radius: 7px;
 margin: 5px;
-background-color: ${({view})=>view && '#bae0ff'};
 transition: all 0.3s;
 
 .Title{
-color: ${({view})=>view && '#000'};
+color: #000;
     
   }
 
 :hover{
-background-color: #ccc;
 
-.Title{
-    
-    color:#000;
-    /* border-bottom:1px solid #fff; */
-  }
+${({view})=>!view && 'background-color: #f0f0f0;'}
 }
 
 .iconSidebar{
   position: absolute;
 }
+background-color: ${({view})=>view && '#bae0ff'};
+
 `;
 
 Item.Child = styled.div`
@@ -179,7 +175,7 @@ position: relative;
 background-color: #1677ff;
 
 .Title{
-    color:#000;
+    color:#ccc;
   }
 }
 
