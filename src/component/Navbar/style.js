@@ -13,6 +13,19 @@ box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%), 0 1px 6px -1px rgb(0 0 0 / 2%), 0 2px 4
 justify-content:space-between;
 `;
 
+Wrap.Text = styled.div`
+color:#000;
+font-size: 16px;
+font-weight: 600;
+cursor:pointer;
+margin:0 20px 0 0;
+border-bottom:${({active})=>active && '3px groove #61dafb'};
+transition:all 0.1s;
+
+-webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+`;
 
 export const Icon = styled.div``;
 
@@ -58,4 +71,5 @@ margin:0 10px 0 30px;
 Wrap.LogoText  = styled.div`
 font-size: ${({mini})=>mini ? '13px' : '27px'};
 color:#61dafb;
+
 `;
