@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { SidebarData } from '../utils/sidebsrView';
 import Button from '../component/Button';
-import Asosiy from '../component/Asosiy';
+import Asosiy from '../view/Asosiy';
 import Generic from '../view/generic';
 
 function App() {

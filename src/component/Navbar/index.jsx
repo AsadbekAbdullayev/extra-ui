@@ -33,7 +33,6 @@ const [clickId,setClickId] = useState(false);
 const openSubmenu =(id,name)=>{
   navigate(name)
   setClickId(name);
-
 };
   return (
     <div>
@@ -48,7 +47,7 @@ const openSubmenu =(id,name)=>{
 <Icon.Container>
        <div style={{display:'flex',height:'40px',alignItems:'center'}}>
         {
-          items?.map(({id,name},i)=><Wrap.Text key={i} onClick={()=>{openSubmenu(id,name)}} active={name == clickId}>
+          items?.map(({id,name},i)=><Wrap.Text key={i} onClick={()=>{openSubmenu(id,name)}} active={name === clickId}>
           {name}
          </Wrap.Text>)
         }
