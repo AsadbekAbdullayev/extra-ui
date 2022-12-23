@@ -9,7 +9,7 @@ import { ReactComponent as Arrow } from '../../assets/icon/arrowUp.svg';
 
 
 export const Container = styled.div`
- width: ${({width})=>width || '263px'};
+ width: ${({view})=>view ? '0px' : '263px'};
  transition: width 0.2s;
  height: 870px;
  

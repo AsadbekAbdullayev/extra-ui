@@ -4,7 +4,8 @@ import {SidebarData} from '../../utils/sidebsrView';
 import {
   useNavigate
 } from "react-router-dom";
-export default function SidebarComponent() {
+export default function SidebarComponent({view}) {
+  console.log(view,'view');
 
   // Input: l1 = [2,4,3], l2 = [5,6,4]
   // Output: [7,0,8]
@@ -35,7 +36,7 @@ if(id === clickId){
 
 
   return (
-    <Container  width={togle ? '100px' : '330px'} className='style-1'>
+    <Container  view={view} className='style-1'>
      {
       SidebarData?.map((prop)=>
    {  

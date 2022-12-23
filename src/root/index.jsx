@@ -8,7 +8,7 @@ import { SidebarData } from '../utils/sidebsrView';
 import Button from '../component/Button';
 import Asosiy from '../view/Asosiy';
 import Generic from '../view/generic';
-
+import Sidebar from '../component/sidebar';
 function App() {
   return (
     <div>
@@ -20,6 +20,7 @@ function App() {
       <Route path="/Docs" element={<Generic />}/>
       <Route path="/Resources" element={<Generic />}/>
       <Route path="/Blog" element={<Generic />}/>
+      {/* <Route path="/" element={<Sidebar />} /> */}
 
         {
           SidebarData?.map(({path,component,hidden})=>!hidden &&
