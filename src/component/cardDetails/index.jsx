@@ -1,6 +1,9 @@
 import React from 'react'
 import {Container} from './style.js';
 const Card = () => {
+
+
+
   // let timePoints =["01:01","02:02"]
   // [670, 1319, 1439, 1440, 1442, 1450]
   // Output: 1 ['23:57','00:00','00:02']
@@ -58,7 +61,7 @@ const Card = () => {
 
   return (
     <Container>
-      
+      cardMASTER
     </Container>
   )
 }
