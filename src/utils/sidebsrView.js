@@ -6,6 +6,7 @@
 
 
 import Button from '../component/Button';
+import Generic from '../view/generic';
 export const SidebarData = [
     {
       id:1,
@@ -208,4 +209,40 @@ export const SidebarData = [
       component: Button,
       child:[],
     },
+    {
+      path: "/docs",
+      component: Generic,
+      name: "Docs",
+      hidden: true,
+      children: [],
+  },
+  {
+      path: "/Components",
+      component: Generic,
+      name: "Components",
+      hidden: true,
+      children: [],
+  },
+  {
+      path: "/Resources",
+      component: Generic,
+      name: "Resources",
+      hidden: true,
+      children: [],
+  },
+  {
+      path: "/Docs",
+      component: Generic,
+      name: "Docs",
+      hidden: true,
+      children: [],
+  },
+
+  {
+    path: "/Blog",
+    component: Generic,
+    name: "Blog",
+    hidden: true,
+    children: [],
+},
   ];
