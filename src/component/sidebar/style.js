@@ -9,11 +9,10 @@ import { ReactComponent as Arrow } from '../../assets/icon/arrowUp.svg';
 
 
 export const Container = styled.div`
- width: ${({view})=>view ? '0px' : '263px'};
+ width: ${({viewed})=>viewed ? '0px' : '333px'};
  transition: width 0.2s;
  height: 870px;
  
- /* background-color: #001529; */
 /* border-radius: 0px 30px 0px 0px; */
 /* padding:50px 0px 50px 30px; */
 display: flex;
