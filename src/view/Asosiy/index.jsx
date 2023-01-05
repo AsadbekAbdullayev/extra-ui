@@ -12,46 +12,40 @@ const [active, setActive] = useState(true);
     (pathname === '/Components' || pathname === '/Docs' || pathname === '/Resources' || pathname === '/Blog') ? setActive(true) : setActive(false);
   }, [pathname])
 
-let n = 1000;
-// let count =[];
-//  for (let i = 0; i < n; i++) {
 
-//   let nn =0;
-//     for (let j = 2; j <= i; j++) {
-//         if(i%j ==0){
-//           nn++
+// // program to count down numbers to 1
+// function countDown(number) {
 
-//         }
-//      }
-//      if(nn  == 1){
-//       count.push(i)
-//     }
-//   nn = 0;
+//   // display the number
+//   console.log(number);
 
-  
+//   // decrease the number value
+//   const newNumber = number - 1;
 
+//   // base case
+//   if (newNumber > 0) {
+//       countDown(newNumber);
+//   }
+// }
 
-//  }
+// countDown(4);
 
-
-let count = 0;
-const isPrime = Array(n).fill(true);
-
-for (let i = 2; i < n; i++) {
-  if (isPrime[i]) {
-
-    count++;
-    for (let j = i; j < n; j += i) {
-
-      isPrime[j] = false
-    }; // sieve out multiples
+let nastedArray = [[1], [[2, 3]], [[[4]]]];
+let a = [];
+let aa = (arr)=>{
+  for (let i = 0; i < arr.length; i++) {
+if(Array.isArray(arr[i])){
+  aa(arr[i])
+}else{
+  a.push(arr[i])
+}    
   }
 }
-console.log(count,'count');
 
-
-
-
+aa(nastedArray);
+console.log(a,'aaa');
+// console.log(nastedArray.toString().split(',').map(v=>+v),'aasas')
+// console.log(+[2]);==>2
   return (
     <Container>
       <Navbar/>
