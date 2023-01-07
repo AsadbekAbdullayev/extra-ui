@@ -1,10 +1,14 @@
 import React from 'react'
 import {Container} from './style.js';
-const Card = () => {
-
+const Card = ({
+  title,
+  component,
+  margin,
+}) => {
   return (
     <Container>
-      cardMASTER
+      {component}
+
     </Container>
   )
 }
