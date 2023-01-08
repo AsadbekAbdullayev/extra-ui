@@ -25,6 +25,8 @@ const callFunc = (name) =>{
 
 const [clickId,setClickId] = useState(false);
 const openSubmenu =(id,name)=>{
+
+  
   navigate(name)
 if(id === clickId){
   setClickId(false);
