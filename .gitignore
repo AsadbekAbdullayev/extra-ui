@@ -9,6 +9,7 @@
 
 # testing
 /coverage
+/0qoralama
 
 # production
 /build
