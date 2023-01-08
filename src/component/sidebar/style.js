@@ -1,10 +1,5 @@
 
 import styled from 'styled-components';
-import { ReactComponent as Home } from '../../assets/icon/Home.svg';
-import { ReactComponent as Zak } from '../../assets/icon/zakaz.svg';
-import { ReactComponent as Tov } from '../../assets/icon/tovar.svg';
-import { ReactComponent as Star } from '../../assets/icon/Star.svg';
-import { ReactComponent as Kor } from '../../assets/icon/kor.svg';
 import { ReactComponent as Arrow } from '../../assets/icon/arrowUp.svg';
 
 
@@ -59,50 +54,12 @@ width: 22px;
 
 
 
-Icon.Home = styled(Home)`
-width: 22px;
- height:22px;
- path {
-    fill: ${({ color }) => color ? '#3D639D'  : '#fff'};
-  }
 
-  position: absolute;
-`;
 
-Icon.Zakaz = styled(Zak)`
-width: 22px;
- height:22px;
- margin:0 20px 0 20px;
- path {
-    fill: ${({ color }) => color ? '#3D639D'  : '#fff'};
-  }
-`;
-Icon.Tovar = styled(Tov)`
-width: 22px;
- height:22px;
- margin:0 20px 0 20px;
- path {
-    fill: ${({ color }) => color ? '#3D639D'  : '#fff'};
-  }
-`;
 
-Icon.Star = styled(Star)`
-width: 22px;
- height:22px;
- margin:0 20px 0 20px;
- path {
-    fill: ${({ color }) => color ? '#3D639D'  : '#fff'};
-  }
-`;
 
-Icon.Korzina = styled(Kor)`
-width: 22px;
- height:22px;
- margin:0 20px 0 20px;
- path {
-    fill: ${({ color }) => color ? '#3D639D'  : '#fff'};
-  }
-`;
+
+
 
 Container.Title = styled.div`
 cursor: pointer;

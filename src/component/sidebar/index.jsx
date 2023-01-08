@@ -37,9 +37,9 @@ useEffect(()=>{
      {
       SidebarData?.map((prop)=>
    {  
-    const {  name,child,id,hidden } = prop;
-    return (!child?.length && !hidden)&& (<Item onClick={()=>{openSubmenu(id,name)}} view={clickId === id} key={id}>
-   <Container.Title className='Title' togle={clickId === id}>{name}</Container.Title>
+    const { path, name,child,id,hidden } = prop;
+    return (!child?.length && !hidden)&& (<Item onClick={()=>{openSubmenu(id,name)}} view={path === pathname} key={id}>
+   <Container.Title className='Title' togle={path === pathname}>{name}</Container.Title>
 </Item>) 
 
 }
