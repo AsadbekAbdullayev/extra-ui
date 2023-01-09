@@ -4,8 +4,8 @@ export const Container = styled.div`
 width:100%;
 height:fit-content;
 border:1px solid #e1e1e1;
-margin:${({margin})=>margin && margin};
-padding:35px 0 18px 0;
+margin:${({margin})=>margin ? margin :'0 0 20px 0'};
+padding:35px 10px 18px 10px;
 
 border-radius: 6px;
 :hover{
@@ -17,12 +17,14 @@ transition:all 0.1s;
 `;
 
 Container.Title = styled.div`
-font-size:14px;
-font-weight:500;
+font-size:16px;
+font-weight:640;
 line-height:28px;
 word-spacing:0px;
 color:black;
-margin:0 6px;
+margin:0 10px;
+white-space: nowrap;
+
 `;
 
 Container.Desc = styled.div`
@@ -46,6 +48,13 @@ display:flex;
 align-items:center;
 width:100%;
 
+`;
+
+Container.Flex3 = styled.div`
+  width: fit-content;
+  display:flex;
+  flex-wrap: nowrap;
+align-items:center;
 `;
 
 Container.Line1 = styled.div`

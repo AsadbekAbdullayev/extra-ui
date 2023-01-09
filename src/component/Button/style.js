@@ -7,23 +7,30 @@ export const Container = styled.div`
 width:100%;
 height: 100%;
 display: flex;
-gap:25px;
+flex-direction: column;
 `;
 export const Icon = styled.div``;
 
 Icon.Search = styled(Search)`
 width:19px;
 height:19px;
-margin:0 8px 0 0;
 path {
     fill: #fff;
   }
 `;
 
+Icon.Search1 = styled(Search)`
+width:19px;
+height:19px;
+path {
+    fill: #000;
+  }
+`;
+
+
 Icon.Download = styled(Download)`
 width:19px;
 height:19px;
-margin:0 8px 0 0;
 path {
     fill: #fff;
   }
@@ -32,8 +39,13 @@ path {
 Icon.Loading = styled(Loading)`
 width:19px;
 height:19px;
-margin:0 8px 0 0;
 path {
     fill: #fff;
   }
+`;
+
+Container.Flex = styled.div`
+display: flex;
+gap:25px;
+
 `;

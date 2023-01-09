@@ -15,7 +15,7 @@ const Card = ({
 
       <Container.Flex>
 <Container.Line1/>
-<Container.Title>{title}</Container.Title>
+<Container.Flex3><Container.Title>{title}</Container.Title></Container.Flex3>
 <Container.Line2/>
 
       </Container.Flex>
