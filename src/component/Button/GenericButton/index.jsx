@@ -16,7 +16,7 @@ const GenericBottom = ({
 }) => {
 
   return (
-    <Container onClick={onClick} padding={padding}
+    <Container onClick={!disabled && onClick} padding={padding}
     shape={shape}
      margin={margin} 
      type={type} 
@@ -25,7 +25,7 @@ const GenericBottom = ({
      disabled={disabled}
      loading={loading}
      icon={icon}
-     >{loading ? <Container.Loading > <Icon.Loading/></Container.Loading> :  icon} {title && <Container.Title> {title}</Container.Title>}</Container>
+     >{loading ? <Container.Loading > <Icon.Loading/></Container.Loading> :  icon} {title && <Container.Title icon={icon} loading={loading} size={size}> {title} {disabled && '(disabled)'}</Container.Title>}</Container>
 
   )
 }

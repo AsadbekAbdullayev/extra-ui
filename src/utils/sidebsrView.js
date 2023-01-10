@@ -24,14 +24,7 @@ export const SidebarData = [
         
       ],
     },
-    {
-      id:3,
-      path:'/Menu',
-      name:'Menu',
-      child:[],
-      component: Button,
-
-    },
+   
     {
       id:51,
       path:'/Pagination',
@@ -112,12 +105,7 @@ export const SidebarData = [
       child:[],
       component: Button,
     },
-    {
-      id:14,
-      path:'/Transfer',
-      name:'Transfer',
-      child:[],
-    },
+    
     {
       id:15,
       path:'/Upload',

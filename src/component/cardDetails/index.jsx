@@ -5,10 +5,11 @@ const Card = ({
   component,
   margin,
   desc,
+  width,
 }) => {
   const [togle,setTogle] = useState(false);
   return (
-    <Container>
+    <Container width={width} margin={margin}>
       <Container.Flex1>
       {component}
       </Container.Flex1>

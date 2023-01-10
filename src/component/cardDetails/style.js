@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width:100%;
+width:${({width})=>width ? width : '100%'};
 height:fit-content;
 border:1px solid #e1e1e1;
 margin:${({margin})=>margin ? margin :'0 0 20px 0'};
-padding:35px 10px 18px 10px;
+padding:35px 15px 18px 15px;
 
 border-radius: 6px;
 :hover{
@@ -39,7 +39,6 @@ display:flex;
 flex-wrap:wrap;
 align-items:center;
 width:100%;
-padding:0 12px;
 `;
 
 Container.Flex = styled.div`
