@@ -146,12 +146,12 @@ title={'Loading'} desc={'Ant Design supports a default button size as well as a 
 
       <div style={{display:'flex',flexWrap: 'wrap'}}>
      <GenericBotton type='Text'  title={'Text'} size={'Default'} />
-     <GenericBotton type='Text'  title={'Text'} size={'Default'} />
+     <GenericBotton type='Text' disabled title={'Text'} size={'Default'} />
       </div>
 
       <div style={{display:'flex',flexWrap: 'wrap'}}>
      <GenericBotton type='Link' Danger title={'Link'} size={'Default'} />
-     <GenericBotton type='Link' Danger title={'Link'} size={'Default'} />
+     <GenericBotton type='Link' disabled Danger title={'Link'} size={'Default'} />
       </div>
   </div>
       

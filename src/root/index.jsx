@@ -15,19 +15,15 @@ function App() {
 
 <Routes>
 <Route path="/" element={<Asosiy />}>
-      <Route path="/Button" element={<Button />}/>
       <Route path="/Components" element={<Generic />}/>
       <Route path="/Docs" element={<Generic />}/>
       <Route path="/Resources" element={<Generic />}/>
       <Route path="/Blog" element={<Generic />}/>
-      {/* <Route path="/" element={<Sidebar />} /> */}
-
-        {
-          SidebarData?.map(({path,component,hidden})=>!hidden &&
-          <Route exact path={path} component={component} />
-          )
+        {  
+          SidebarData?.map(({path,Component,hidden})=>!hidden && <Route exact path={path} element={<Component/>} />)
         }
       </Route>
+      
     </Routes>
         </div>
   );

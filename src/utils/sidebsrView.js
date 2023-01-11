@@ -6,6 +6,7 @@
 
 
 import Button from '../component/Button';
+import Dropdown from '../component/Dropdown';
 import Generic from '../view/generic';
 export const SidebarData = [
     {
@@ -14,12 +15,21 @@ export const SidebarData = [
       name:'Button',
       child:[],
       
-      component: Button,
+      Component: Button,
+    },
+    {
+      id:9,
+      path:'/Input',
+      name:'Input',
+      child:[],
+      Component: Button,
     },
     {
       id:2,
       path:'/Dropdown',
       name:'Dropdown',
+      Component: Dropdown,
+
       child:[
         
       ],
@@ -32,7 +42,7 @@ export const SidebarData = [
       child:[
        
       ],
-      component: Button,
+      Component: Generic,
 
     },
     {
@@ -40,70 +50,57 @@ export const SidebarData = [
       path:'/Steps',
       name:'Steps',
       child:[],
-      component: Button,
-    },
-    {
-      id:5,
-      path:'/AutoComplete',
-      name:'AutoComplete',
-      child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:6,
       path:'/Checkbox',
       name:'Checkbox',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:7,
       path:'/DatePicker',
       name:'DatePicker',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:8,
       path:'/Form',
       name:'Form',
       child:[],
-      component: Button,
+      Component: Generic,
     },
-    {
-      id:9,
-      path:'/Input',
-      name:'Input',
-      child:[],
-      component: Button,
-    },
+  
     {
       id:10,
       path:'/Radio',
       name:'Radio',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:11,
       path:'/Rate',
       name:'Rate',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:12,
       path:'/Select',
       name:'Select',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:13,
       path:'/Switch',
       name:'Switch',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     
     {
@@ -111,116 +108,116 @@ export const SidebarData = [
       path:'/Upload',
       name:'Upload',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:16,
       path:'/Badge',
       name:'Badge',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:17,
       path:'/Card',
       name:'Card',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:18,
       path:'/Collapse',
       name:'Collapse',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:19,
       path:'/Popover',
       name:'Popover',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:20,
       path:'/Segmented',
       name:'Segmented',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:21,
       path:'/Table',
       name:'Table',
       child:[],
-      component: Button,
+      Component: Generic,
     },
     {
       id:22,
       path:'/Tooltip',
       name:'Tooltip',
-      component: Button,
+      Component: Generic,
       child:[],
     },
     {
       id:23,
       path:'/Alert',
       name:'Alert',
-      component: Button,
+      Component: Generic,
       child:[],
     },
     {
       id:24,
       path:'/Message',
       name:'Message',
-      component: Button,
+      Component: Generic,
       child:[],
     },
     {
       id:25,
       path:'/Notification',
       name:'Notification',
-      component: Button,
+      Component: Generic,
       child:[],
     },
     {
       id:26,
       path:'/Progress',
       name:'Progress',
-      component: Button,
+      Component: Generic,
       child:[],
     },
     {
       id:27,
       path:'/Modal',
       name:'Modal',
-      component: Button,
+      Component: Generic,
       child:[],
     },
     {
       path: "/docs",
-      component: Generic,
+      Component: Generic,
       name: "Docs",
       hidden: true,
       children: [],
   },
   {
       path: "/Components",
-      component: Generic,
+      Component: Generic,
       name: "Components",
       hidden: true,
       children: [],
   },
   {
       path: "/Resources",
-      component: Generic,
+      Component: Generic,
       name: "Resources",
       hidden: true,
       children: [],
   },
   {
       path: "/Docs",
-      component: Generic,
+      Component: Generic,
       name: "Docs",
       hidden: true,
       children: [],
@@ -228,7 +225,7 @@ export const SidebarData = [
 
   {
     path: "/Blog",
-    component: Generic,
+    Component: Generic,
     name: "Blog",
     hidden: true,
     children: [],

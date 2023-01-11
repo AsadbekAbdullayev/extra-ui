@@ -44,6 +44,14 @@ const getBorder = ({type, Danger, Ghost,loading,disabled }) => {
 
 
  const getColor = ({type,  Danger,  Ghost,disabled }) => {
+  if (type === 'Text' && disabled) {
+    return "#b8b8b8";
+
+  }  if (type === 'Link' && disabled) {
+    return "#b8b8b8";
+
+  }
+
   if (type === 'Link') {
     if(disabled){
         return "#b8b8b8";
@@ -65,7 +73,11 @@ const getBorder = ({type, Danger, Ghost,loading,disabled }) => {
       } else {
           return "#fff";
       }
-  } else if (Danger) {
+  } else if (type === 'Dashed' && disabled) {
+    return "#b8b8b8";
+} 
+  
+  else if (Danger) {
       return "#ff4d4f";
   } else if ( type === 'Default' ) {
     if(disabled){
@@ -99,6 +111,14 @@ return '17px'
   }
 }};
 border: ${getBorder};
+@keyframes pulse {
+        0% {box-shadow:${({Danger})=>Danger  ? '0 0 0 #ff7875' : '0 0 0 #1890ff'}}
+        70% {box-shadow: 0 0 0 5px rgba(204, 169, 44, 0);}
+        100% {box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);}
+    }
+
+    animation:${({ type,activeButton}) =>(type !== 'Link'  && type !== 'Text' && activeButton) && 'pulse .7s infinite'}   ;
+
 
 background: ${({ type, loading,Danger,disabled}) => {
     if (type === 'Primary' && Danger) {
@@ -128,15 +148,15 @@ transition:fill 0.3s;
 
 }
 :hover{
-  background-color: ${({ type,Danger }) => {
+  background-color: ${({ type,Danger,disabled }) => {
      if (type === 'Primary' && Danger) {
 
         return "#ff7875";
      }
-     else if (type === 'Primary') {
+     else if (type === 'Primary' && !disabled) {
             return "#74ade1";
         } 
-        else if (type === 'Text') {
+        else if (type === 'Text' && !disabled) {
           if (Danger) {
             return "#fcd5d4";
         }else{
@@ -160,12 +180,12 @@ transition:fill 0.3s;
   } 
 }
 
-opacity: ${({ type,Danger }) => {
-        if (type === 'Link' || Danger) {
+opacity: ${({ type,Danger,disabled }) => {
+        if ((type === 'Link' || Danger) && !disabled) {
             return "0.7";
         } 
     }};
-  color:${({ type,Danger }) => {
+  color:${({ type,Danger,disabled }) => {
    if(Danger && type === 'Dashed'){
     return "#ff7875";
 
@@ -174,16 +194,16 @@ opacity: ${({ type,Danger }) => {
     return "#ff7875";
 
    }
-        if (type === 'Default') {
+        if (type === 'Default' && !disabled) {
             return "#74ade1";
-        } else if (type === 'Dashed') {
+        } else if (type === 'Dashed' && !disabled) {
           return "#74ade1";
         } else {
             return null;
         }
     }};  
 
-border-color:${({ type,Danger }) => {
+border-color:${({ type,Danger,disabled }) => {
     if(Danger && type === 'Dashed'){
     return "#ff7875";
 
@@ -192,11 +212,11 @@ border-color:${({ type,Danger }) => {
     return "#ff7875";
 
    }
-        if (type === 'Default') {
+        if (type === 'Default'&& !disabled) {
             return "#1677FF";
-        } else if (type === 'Dashed') {
+        } else if (type === 'Dashed' && !disabled) {
           return "#1677FF";
-        } else if (type === 'Primary') {
+        } else if (type === 'Primary' && !disabled) {
             if(Danger){
                 return "#ff7875";
             }else{
@@ -211,8 +231,11 @@ border-color:${({ type,Danger }) => {
 }
 
 :active{
-  background-color:${({ type,Danger }) => {
-        if (type === 'Primary') {
+   
+
+
+  background-color:${({ type,Danger,disabled }) => {
+        if (type === 'Primary'&& !disabled) {
             if (Danger) {
             return "#d9363e";
         }else{
@@ -223,7 +246,7 @@ border-color:${({ type,Danger }) => {
         }
     }};
 
-color:${({ type,Danger }) => {
+color:${({ type,Danger,disabled }) => {
 
 if(Danger && type === 'Dashed'){
     return "#ff7875";
@@ -234,16 +257,16 @@ if(Danger && type === 'Dashed'){
 
    }
 
-        if (type === 'Default') {
+        if (type === 'Default'&& !disabled) {
             return "#1677FF";
-        } else if (type === 'Dashed') {
+        } else if (type === 'Dashed'&& !disabled) {
           return "#1677FF";
         } else {
             return null;
         }
     }};  
 
-border-color:${({ type,Danger }) => {
+border-color:${({ type,Danger ,disabled}) => {
 if(Danger && type === 'Dashed'){
     return "#ff7875";
 
@@ -253,17 +276,17 @@ if(Danger && type === 'Dashed'){
 
    }
 
-        if (type === 'Default') {
+        if (type === 'Default'&& !disabled) {
             return "#1677FF";
-        } else if (type === 'Dashed') {
+        } else if (type === 'Dashed'&& !disabled) {
           return "#1677FF";
         } else {
             return null;
         }
     }}; 
 
-  opacity: ${({ type,Danger }) => {
-        if (type === 'Link' || Danger) {
+  opacity: ${({ type,Danger,disabled }) => {
+        if ((type === 'Link' || Danger) && !disabled) {
             return "1";
         } 
     }};
@@ -299,8 +322,8 @@ padding:${({size})=>{
 
 };
 
-width: fit-content;
-display:flex;
+width:${({width})=>width ? width  : 'fit-content'};
+display:flex; 
 align-items:center;
 margin:${({margin})=>margin ? margin : '5px 10px 5px 0'};
 cursor:${({disabled})=>disabled ? 'not-allowed' : 'pointer'};
@@ -330,6 +353,8 @@ line-height: ${({size})=>{
             return "22px";
           
         }  }};
+
+
 
 `;
 

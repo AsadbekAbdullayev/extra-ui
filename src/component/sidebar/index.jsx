@@ -4,8 +4,7 @@ import {SidebarData} from '../../utils/sidebsrView';
 import {
   useNavigate
 } from "react-router-dom";
-export default function SidebarComponent({viewed}) {
-console.log(viewed,'viewed');
+export default function SidebarComponent() {
 let navigate = useNavigate();
 // const pathname = window.location.pathname
 // const [togle,setTogle] = useState(false);
@@ -17,8 +16,6 @@ let navigate = useNavigate();
 
 const [clickId,setClickId] = useState(false);
 const openSubmenu =(id,name)=>{
-
-  
   navigate(name)
 if(id === clickId){
   setClickId(false);
