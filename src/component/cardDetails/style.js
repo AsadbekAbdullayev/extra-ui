@@ -1,17 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-width:${({width})=>width ? width : '100%'};
+width:${({ width }) => width ? width : '100%'};
 height:fit-content;
 border:1px solid #e1e1e1;
-margin:${({margin})=>margin ? margin :'0 0 20px 0'};
-padding:35px 15px 18px 15px;
-
+margin:${({ margin }) => margin ? margin : '0 0 20px 0'};
+padding:20px 15px 15px 15px;
 border-radius: 6px;
 :hover{
-    box-shadow: 3px 3px 4px -4px rgba(142,149,156,0.75);
--webkit-box-shadow: 3px 3px 4px -4px rgba(142,149,156,0.75);
--moz-box-shadow: 3px 3px 4px -4px rgba(142,149,156,0.75);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 transition:all 0.1s;
 `;
@@ -42,7 +39,7 @@ width:100%;
 `;
 
 Container.Flex = styled.div`
-margin:35px 0 0 0;
+margin:15px 0 0 0;
 display:flex;
 align-items:center;
 width:100%;

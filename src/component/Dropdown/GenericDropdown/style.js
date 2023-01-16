@@ -10,28 +10,32 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 0 10px;
-  /* border-radius:6px; */
   transition: all 0.3s;
   margin: ${({ margin }) => (margin ? margin : '0 0 15px 0')};
   user-select: none;
+  cursor:${({disabled})=>disabled && 'not-allowed'};
+  color:${({disabled})=>disabled && '#d9d9d9'};
+  path {
+    fill: ${({disabled})=>disabled && '#d9d9d9'};
+  }
   :hover {
-    border-color: #74ade1;
+    border-color:${({disabled})=>!disabled && '#74ade1'};
     & .IconCon {
-      border-color: #74ade1;
+      border-color:${({disabled})=>!disabled && '#74ade1'};
     }
     & svg {
       transition: all 0.3s;
       path {
-        fill: #74ade1;
+        fill: ${({disabled})=>!disabled && '#74ade1'};
       }
     }
   }
 
   :active {
-    border-color: #d9d9d9;
-    border-color: #74ade1;
+    border-color:${({disabled})=>!disabled && '#d9d9d9'};
+    border-color:${({disabled})=>!disabled && '#74ade1'};
     .IconCon {
-      border-color: #74ade1;
+      border-color:${({disabled})=>!disabled && '#74ade1'};
     }
   }
 `;
@@ -58,36 +62,40 @@ Container.Icon = styled.div`
 `;
 
 export const Selection = styled.div`
-  height: ${({ open }) => (open ? 'fit-content' : '0px')};
-  display: ${({ open }) => (open ? 'flex' : 'none')};
-  transition: all 0.3s;
-  z-index: 99;
+transition: all 0.3s;
+  height: ${({ open,count }) => (open ? `${count*40}px` : '0px')};
+  display: ${({ open }) => (open ? 'block' : 'none')};
   background-color: #fff;
-  padding: 5px;
   position: absolute;
-  /* border:1px solid #d9d9d9; */
   user-select: none;
   flex-direction: column;
-  width: 99%;
+  width: 100%;
+  z-index:99;
   top: 45px;
   left: -1px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 
 Selection.Item = styled.div`
-  height: 40px;
+height: ${({ open }) => (open ? '40px' : '0px')};
+transition: height 0.3s;
+display: ${({ open }) => (open ? 'block' : 'none')};
+z-index:99;
+
   user-select: none;
   display: flex;
   align-items: center;
   padding: 0 10px;
   cursor: pointer;
+  background-color:${({active})=>active && '#f0f0f0'};
+  font-weight: ${({active})=>active && '650'};
+
   :hover {
     background-color: #f0f0f0;
     font-weight: 650;
   }
 `;
 Selection.Item1 = styled.input`
-  /* width:100%; */
   height: 40px;
   user-select: none;
 `;

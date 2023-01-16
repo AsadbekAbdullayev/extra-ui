@@ -1,58 +1,69 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, } from 'react';
 import { Container, Icon, Selection } from './style';
 const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
   let options = [
     {
       id: 1,
-      name: 'Value 1',
+      name: 'Option 1',
       value: 'value1',
     },
     {
       id: 2,
-      name: 'Value 2',
+      name: 'Option 2',
       value: 'value2',
     },
     {
       id: 3,
-      name: 'Value 3',
+      name: 'Option 3',
       value: 'value3',
     },
   ];
 
   const selectRef = useRef('');
   const [open, setOpen] = useState(false);
-  useEffect(() => selectRef.current.focus(), []);
   const onClick2 = (e) => {
     onClick && onClick();
+    selectRef.current.focus();
     setOpen(!open);
   };
 
   const onBlur = () => {
-    console.log('hey');
+    setOpen(false);
   };
-
   const onClickSelection = (e) => {
     e.stopPropagation();
   };
-
+  const [val, setVal] = useState('');
+  const [select, setSelect] = useState('');
+  const onClickItem = (value, id) => {
+    setVal(value);
+    setOpen(false);
+    setSelect(id);
+  }
   return (
     <Container
-      onClick={(e) => onClick2(e)}
+      onClick={(e) =>!disabled && onClick2(e)}
       width={width}
       margin={margin}
       disabled={disabled}
+
     >
-      Dropdown
+      {val ? val : 'Select'}
       <Selection
         open={open}
         onClick={(e) => onClickSelection(e)}
         tabIndex={0}
         onBlur={onBlur}
         ref={selectRef}
+        count={options.length}
+      onMouseLeave={()=>setOpen(false)}
+
       >
-        <Selection.Item>Item 1</Selection.Item>
-        <Selection.Item>Item 2</Selection.Item>
-        <Selection.Item>Item 3</Selection.Item>
+        {
+          options.map(({ name, id }) => {
+            return <Selection.Item open={open} key={id} onClick={() => onClickItem(name, id)} active={select === id}>{name}</Selection.Item>
+          })
+        }
       </Selection>
       <Container.Icon className='IconCon' icon={icon}>
         {icon ? (

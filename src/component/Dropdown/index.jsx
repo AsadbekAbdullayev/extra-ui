@@ -14,9 +14,8 @@ const Dropdown = () => {
             component={<div style={{ width: '100%' }}>
               <GenericDropdown />
               <GenericDropdown />
-              <GenericDropdown />
-              <GenericDropdown />
-              <GenericDropdown />
+              <GenericDropdown disabled={'true'}/>
+              <GenericDropdown icon={<Container.Pen/>}/>
             </div>}
 
             title={'Type'} desc={'There are primary button, default button, dashed button, text button and link button in antd.'} />

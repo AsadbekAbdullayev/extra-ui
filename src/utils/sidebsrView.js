@@ -7,6 +7,7 @@
 
 import Button from '../component/Button';
 import Dropdown from '../component/Dropdown';
+import Pagination from '../component/Pagination';
 import Generic from '../view/generic';
 export const SidebarData = [
     {
@@ -42,7 +43,7 @@ export const SidebarData = [
       child:[
        
       ],
-      Component: Generic,
+      Component: Pagination,
 
     },
     {

@@ -6,7 +6,7 @@ import { ReactComponent as Arrow } from '../../assets/icon/arrowUp.svg';
 export const Container = styled.div`
  width: ${({viewed})=>viewed ? '0px' : '333px'};
  transition: width 0.2s;
- height: 870px;
+ height:86vh;
  
 /* border-radius: 0px 30px 0px 0px; */
 /* padding:50px 0px 50px 30px; */
