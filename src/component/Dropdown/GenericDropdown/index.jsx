@@ -1,4 +1,4 @@
-import React, { useState, useRef, } from 'react';
+import React, { useState, useRef } from 'react';
 import { Container, Icon, Selection } from './style';
 const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
   let options = [
@@ -39,14 +39,13 @@ const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
     setVal(value);
     setOpen(false);
     setSelect(id);
-  }
+  };
   return (
     <Container
-      onClick={(e) =>!disabled && onClick2(e)}
+      onClick={(e) => !disabled && onClick2(e)}
       width={width}
       margin={margin}
       disabled={disabled}
-
     >
       {val ? val : 'Select'}
       <Selection
@@ -56,14 +55,20 @@ const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
         onBlur={onBlur}
         ref={selectRef}
         count={options.length}
-      onMouseLeave={()=>setOpen(false)}
-
+        onMouseLeave={() => setOpen(false)}
       >
-        {
-          options.map(({ name, id }) => {
-            return <Selection.Item open={open} key={id} onClick={() => onClickItem(name, id)} active={select === id}>{name}</Selection.Item>
-          })
-        }
+        {options.map(({ name, id }) => {
+          return (
+            <Selection.Item
+              open={open}
+              key={id}
+              onClick={() => onClickItem(name, id)}
+              active={select === id}
+            >
+              {name}
+            </Selection.Item>
+          );
+        })}
       </Selection>
       <Container.Icon className='IconCon' icon={icon}>
         {icon ? (
@@ -79,3 +84,6 @@ const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
 };
 
 export default Dropdown;
+
+// import { PlusIcon } from '@styledIcons';
+// import { EditIcon, DeleteIcon } from '@styledIcons';

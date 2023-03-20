@@ -44,54 +44,23 @@ const Pagination = ({
       <Container.Item
         onClick={() => clikCounter('left')}
         disabled={current2 === 0}
+        title={'Previous Page'}
       >
         <Icon.Left />
       </Container.Item>
 
       {Array(SizeAll)
         .fill(0)
-        .map((value, i) => {
+        .map((v, i) => {
           return (
             <>
-              {current2 >= 5 && SizeAll - 4 <= current2 ? (
-                i === 1 ? (
-                  <Container.Item
-                    active={current2 === i}
-                    onClick={() => setCurrent2(i)}
-                  >
-                    prev
-                  </Container.Item>
-                ) : i === SizeAll - 2 ? (
-                  <Container.Item
-                    active={current2 === i}
-                    onClick={() => setCurrent2(i)}
-                  >
-                    next
-                  </Container.Item>
-                ) : (
-                  (current2 - 1 === i ||
-                    current2 - 2 === i ||
-                    current2 === i ||
-                    0 === i ||
-                    i === SizeAll ||
-                    i === SizeAll - 1 ||
-                    i === SizeAll - 2) && (
-                    <Container.Item
-                      active={current2 === i}
-                      onClick={() => setCurrent2(i)}
-                    >
-                      {i + 1}
-                    </Container.Item>
-                  )
-                )
-              ) : (
-                <Container.Item
-                  active={current2 === i}
-                  onClick={() => setCurrent2(i)}
-                >
-                  {i + 1}
-                </Container.Item>
-              )}
+              <Container.Item
+                active={current2 === i}
+                onClick={() => setCurrent2(i)}
+                title={i + 1}
+              >
+                {i + 1}
+              </Container.Item>
             </>
           );
         })}
@@ -99,14 +68,17 @@ const Pagination = ({
       <Container.Item
         onClick={() => clikCounter('right')}
         disabled={current2 === SizeAll - 1}
+        title={'Next Page'}
       >
         <Icon.Right />
       </Container.Item>
 
+      {/* Counter */}
       {counter && (
         <Container.Select
           onClick={() => setOpen(!open)}
           onMouseLeave={() => setOpen(false)}
+          title={size + ' / page'}
         >
           {`${size} / page`}
 

@@ -17,22 +17,6 @@ const Dropdown = () => {
                   justifyContent: 'flex-end',
                 }}
               >
-                <GenericPagination total={50} />
-              </div>
-            }
-            title={'Basic'}
-            desc={'The most basic dropdown menu.'}
-          />
-
-          <Card
-            component={
-              <div
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                }}
-              >
                 <GenericPagination total={50} counter />
               </div>
             }
