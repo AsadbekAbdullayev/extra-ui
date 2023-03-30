@@ -282,9 +282,9 @@ export const Container = styled.div`
     if (size === 'Small') {
       return '0 7px 0 7px';
     } else if (size === 'Large') {
-      return '6px 15px';
+      return '7px ';
     } else {
-      return '6px 15px';
+      return '7px ';
     }
   }};
 
