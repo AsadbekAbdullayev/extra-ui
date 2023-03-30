@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Image, Container } from './style';
 import { EyeIcon, DeleteIcon } from '../../Generics/GenericIcons';
+import Modal from '../../Modal/GenericModal';
 const GenericUploader = () => {
   const inputRef = useRef(null);
 
@@ -32,8 +33,26 @@ const GenericUploader = () => {
   const Click = () => {
     inputRef.current.click();
   };
+  const [urlNew, setUrlNew] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const clikView = (url) => {
+    setUrlNew(url);
+    setIsModalOpen(true);
+  };
+  const deleteFunc = (id) => {
+    let newData = imageData?.filter((v) => v?.id !== id);
+    setImageData([...newData]);
+  };
   return (
     <Container>
+      <Modal
+        height='400px'
+        width='500px'
+        open={isModalOpen}
+        onCancel={() => setIsModalOpen(false)}
+      >
+        <Image width='100%' height='100%' src={urlNew} alt='Rasm' />
+      </Modal>
       {imageData?.map(({ id, url }) => (
         <Image.Wrap
           key={id}
@@ -49,8 +68,18 @@ const GenericUploader = () => {
                 justifyContent: 'space-between',
               }}
             >
-              <EyeIcon width={'18px'} height='18px' color='#fff' />
-              <DeleteIcon width={'18px'} height='18px' color='#fff' />
+              <EyeIcon
+                width={'18px'}
+                height='18px'
+                color='#fff'
+                onClick={() => clikView(url)}
+              />
+              <DeleteIcon
+                width={'18px'}
+                height='18px'
+                color='#fff'
+                onClick={() => deleteFunc(id)}
+              />
             </div>
           </Image.Action>
         </Image.Wrap>

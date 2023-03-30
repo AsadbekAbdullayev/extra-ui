@@ -20,12 +20,11 @@ Container.Column = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 115px;
-  height: 115px;
+  width: ${({ width }) => (width ? width : '115px')};
+  height: ${({ height }) => (height ? height : '115px')};
   cursor: pointer;
   background-color: #fafafa;
   border-radius: 4px;
-  position: relative;
 `;
 
 Image.Action = styled.div`
@@ -41,6 +40,8 @@ Image.Action = styled.div`
 `;
 
 Image.Wrap = styled.div`
+  position: relative;
+
   border: 1px dashed #d9d9d9;
   width: 120px;
   height: 120px;

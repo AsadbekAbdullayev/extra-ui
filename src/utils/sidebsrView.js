@@ -8,6 +8,7 @@ import Button from '../component/Button';
 import Dropdown from '../component/Dropdown';
 import Pagination from '../component/Pagination';
 import Uploader from '../component/Uploader';
+import Modal from '../component/Modal';
 import Generic from '../view/generic';
 export const SidebarData = [
   {
@@ -40,6 +41,13 @@ export const SidebarData = [
     name: 'Pagination',
     child: [],
     Component: Pagination,
+  },
+  {
+    id: 27,
+    path: '/Modal',
+    name: 'Modal',
+    Component: Modal,
+    child: [],
   },
   {
     id: 4,
@@ -183,13 +191,7 @@ export const SidebarData = [
     Component: Generic,
     child: [],
   },
-  {
-    id: 27,
-    path: '/Modal',
-    name: 'Modal',
-    Component: Generic,
-    child: [],
-  },
+
   {
     path: '/docs',
     Component: Generic,

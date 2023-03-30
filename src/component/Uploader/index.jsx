@@ -18,6 +18,16 @@ const Uploader = () => {
             title={'Basic'}
             desc={'The most basic dropdown menu.'}
           />
+          <Card
+            component={<GenericUploader />}
+            title={'Basic'}
+            desc={'The most basic dropdown menu.'}
+          />
+          <Card
+            component={<GenericUploader />}
+            title={'Basic'}
+            desc={'The most basic dropdown menu.'}
+          />
         </Container.Column>
       </Container.Flex>
     </Container>
