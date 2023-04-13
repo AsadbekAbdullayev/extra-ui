@@ -17,6 +17,21 @@ const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
       name: 'Option 3',
       value: 'value3',
     },
+    {
+      id: 3,
+      name: 'Option 3',
+      value: 'value3',
+    },
+    {
+      id: 3,
+      name: 'Option 3',
+      value: 'value3',
+    },
+    {
+      id: 3,
+      name: 'Option 3',
+      value: 'value3',
+    },
   ];
 
   const selectRef = useRef('');
@@ -55,7 +70,7 @@ const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
         onBlur={onBlur}
         ref={selectRef}
         count={options.length}
-        onMouseLeave={() => setOpen(false)}
+        // onMouseLeave={() => setOpen(false)}
       >
         {options.map(({ name, id }) => {
           return (

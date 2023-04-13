@@ -9,6 +9,8 @@ import Dropdown from '../component/Dropdown';
 import Pagination from '../component/Pagination';
 import Uploader from '../component/Uploader';
 import Modal from '../component/Modal';
+import Carousel from '../component/Carousel';
+import Input from '../component/Input';
 import Generic from '../view/generic';
 export const SidebarData = [
   {
@@ -24,7 +26,7 @@ export const SidebarData = [
     path: '/Input',
     name: 'Input',
     child: [],
-    Component: Button,
+    Component: Input,
   },
   {
     id: 2,
@@ -55,6 +57,13 @@ export const SidebarData = [
     name: 'Steps',
     child: [],
     Component: Generic,
+  },
+  {
+    id: 4,
+    path: '/Carousel',
+    name: 'Carousel',
+    child: [],
+    Component: Carousel,
   },
   {
     id: 6,

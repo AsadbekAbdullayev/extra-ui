@@ -100,7 +100,7 @@ export const Item = styled.div`
   .iconSidebar {
     position: absolute;
   }
-  background-color: ${({ view }) => view && '#bae0ff'};
+  background-color: ${({ view }) => view && 'rgb(186, 224, 255,0.5)'};
 `;
 
 Item.Child = styled.div`

@@ -8,6 +8,15 @@ const Modal = () => {
   const [isModalOpen1, setIsModalOpen1] = useState(false);
   const [isModalOpen2, setIsModalOpen2] = useState(false);
   const handleOk = () => {};
+  const [loading, setLoading] = useState(false);
+
+  const loadingClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setIsModalOpen1(!isModalOpen1);
+    }, 1500);
+  };
   return (
     <Container>
       <Container.Flex>
@@ -74,10 +83,33 @@ const Modal = () => {
                   open={isModalOpen1}
                   onOk={handleOk}
                   onCancel={() => setIsModalOpen1(false)}
+                  width='450px'
                 >
-                  <p>Some contents...</p>
-                  <p>Some contents...</p>
-                  <p>Some contents...</p>
+                  <div>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <div
+                      style={{
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        gap: '15px',
+                      }}
+                    >
+                      <Button
+                        type='Default'
+                        onClick={() => setIsModalOpen1(!isModalOpen1)}
+                        title='Cancel'
+                      />
+                      <Button
+                        type='Primary'
+                        loading={loading}
+                        onClick={loadingClick}
+                        title='Ok'
+                      />
+                    </div>
+                  </div>
                 </GenericModal>
               </div>
             }
