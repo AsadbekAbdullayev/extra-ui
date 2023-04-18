@@ -52,7 +52,6 @@ Icon.Loading = styled(Loading)`
 Container.Flex = styled.div`
   display: flex;
   gap: 45px;
-  padding: 0 20px;
 `;
 
 Container.Column = styled.div`

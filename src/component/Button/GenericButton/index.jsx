@@ -14,6 +14,7 @@ const GenericBottom = ({
   disabled,
   onClick,
   width,
+  disabledTitle,
 }) => {
   const [activeButton, setActiveButton] = useState(false);
   const onClick1 = () => {
@@ -49,7 +50,8 @@ const GenericBottom = ({
       {title && (
         <Container.Title icon={icon} loading={loading} size={size}>
           {' '}
-          {title} {disabled && '(disabled)'}
+          {title}{' '}
+          {disabled && disabledTitle ? disabledTitle : disabled && '(disabled)'}
         </Container.Title>
       )}
     </Container>
