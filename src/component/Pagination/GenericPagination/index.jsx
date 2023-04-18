@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Container, Icon } from './style';
-import { ThreeDots } from '@styled-icons/bootstrap/ThreeDots';
-import { ArrowheadRight } from '@styled-icons/evaicons-solid/ArrowheadRight';
-import { ArrowheadLeft } from '@styled-icons/evaicons-solid/ArrowheadLeft';
+// import { ThreeDots } from '@styled-icons/bootstrap/ThreeDots';
+// import { ArrowheadRight } from '@styled-icons/evaicons-solid/ArrowheadRight';
+// import { ArrowheadLeft } from '@styled-icons/evaicons-solid/ArrowheadLeft';
 const Pagination = ({
   onClick,
   margin,
@@ -18,9 +18,9 @@ const Pagination = ({
   const [current2, setCurrent2] = useState(current || 0);
   let SizeAll = Math.ceil(total / size);
 
-  const onClick2 = () => {
-    onClick && onClick();
-  };
+  // const onClick2 = () => {
+  //   onClick && onClick();
+  // };
 
   const clikCounter = (e) => {
     if (e === 'left') {
@@ -58,6 +58,7 @@ const Pagination = ({
                 active={current2 === i}
                 onClick={() => setCurrent2(i)}
                 title={i + 1}
+                key={i}
               >
                 {i + 1}
               </Container.Item>

@@ -1,10 +1,51 @@
 import styled from 'styled-components';
 import { ReactComponent as Upload } from '../../../assets/icon/upload.svg';
 import { ReactComponent as Eye } from '../../../assets/icon/eye.svg';
+import { ReactComponent as EyeSlash } from '../../../assets/icon/eye-slash.svg';
 import { ReactComponent as Delete } from '../../../assets/icon/delete.svg';
 import { ReactComponent as Next } from '../../../assets/icon/next.svg';
 import { ReactComponent as User1 } from '../../../assets/icon/user-1.svg';
 import { ReactComponent as Search } from '../../../assets/icon/Search.svg';
+import { ReactComponent as Call } from '../../../assets/icon/call.svg';
+import { ReactComponent as Check } from '../../../assets/icon/check.svg';
+import { ReactComponent as Warning } from '../../../assets/icon/warning.svg';
+
+export const WarningIcon = styled(Warning)`
+  width: ${({ width }) => (width ? width : '15px')};
+  height: ${({ height }) => (height ? height : 'var(--appTableIconSize)')};
+  margin: ${({ margin }) => margin && margin};
+  path {
+    fill: ${({ color }) => color || 'var(--appTableCollapseHeaderColor)'};
+  }
+`;
+
+export const CheckIcon = styled(Check)`
+  width: ${({ width }) => (width ? width : '15px')};
+  height: ${({ height }) => (height ? height : 'var(--appTableIconSize)')};
+  margin: ${({ margin }) => margin && margin};
+  path {
+    fill: ${({ color }) => color || 'var(--appTableCollapseHeaderColor)'};
+  }
+`;
+
+export const CallIcon = styled(Call)`
+  width: ${({ width }) => (width ? width : '15px')};
+  height: ${({ height }) => (height ? height : 'var(--appTableIconSize)')};
+  margin: ${({ margin }) => margin && margin};
+  path {
+    fill: ${({ color }) => color || 'var(--appTableCollapseHeaderColor)'};
+  }
+`;
+
+export const EyeSlashIcon = styled(EyeSlash)`
+  width: ${({ width }) => (width ? width : '15px')};
+  height: ${({ height }) => (height ? height : 'var(--appTableIconSize)')};
+  margin: ${({ margin }) => margin && margin};
+  path {
+    fill: ${({ color }) => color || 'var(--appTableCollapseHeaderColor)'};
+  }
+  cursor: pointer;
+`;
 
 export const SearchIcon = styled(Search)`
   width: ${({ width }) => (width ? width : '15px')};
