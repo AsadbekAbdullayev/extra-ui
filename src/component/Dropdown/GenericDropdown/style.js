@@ -13,7 +13,7 @@ export const Container = styled.div`
   transition: all 0.3s;
   margin: ${({ margin }) => (margin ? margin : '0 0 15px 0')};
   user-select: none;
-  cursor: ${({ disabled }) => disabled && 'not-allowed'};
+  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
   color: ${({ disabled }) => disabled && '#d9d9d9'};
   path {
     fill: ${({ disabled }) => disabled && '#d9d9d9'};
@@ -38,6 +38,7 @@ export const Container = styled.div`
       border-color: ${({ disabled }) => !disabled && '#74ade1'};
     }
   }
+
 `;
 
 export const Icon = styled.div``;
@@ -77,6 +78,7 @@ export const Selection = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   outline: none;
   overflow-y: auto;
+  cursor:pointer;
 
   &::-webkit-scrollbar {
     background-color: #ccc;
