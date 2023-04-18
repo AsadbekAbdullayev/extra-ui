@@ -11,6 +11,7 @@ import Uploader from '../component/Uploader';
 import Modal from '../component/Modal';
 import Carousel from '../component/Carousel';
 import Input from '../component/Input';
+import Steps from '../component/Steps';
 import Generic from '../view/generic';
 export const SidebarData = [
   {
@@ -56,7 +57,7 @@ export const SidebarData = [
     path: '/Steps',
     name: 'Steps',
     child: [],
-    Component: Generic,
+    Component: Steps,
   },
   {
     id: 4,

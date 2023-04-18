@@ -28,6 +28,33 @@ Container.Prefix1 = styled.div`
   cursor: pointer;
 `;
 
+Container.Suffix1 = styled.div`
+  background-color: ${({ danger }) => (danger ? '#ffe9ed' : '#e3f7ec')};
+  color: #fff;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+  border-top: 1px solid
+    ${({ active, danger, success }) =>
+      danger ? '#ff2425' : success ? '#40a142' : active ? '#1893FF' : '#ccc'};
+  border-bottom: 1px solid
+    ${({ active, danger, success }) =>
+      danger ? '#ff2425' : success ? '#40a142' : active ? '#1893FF' : '#ccc'};
+  cursor: pointer;
+`;
+
+Container.PrefixEye = styled.div`
+  background-color: inherit;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 Icon.Search = styled(Search)`
   width: 17px;
   height: 17px;

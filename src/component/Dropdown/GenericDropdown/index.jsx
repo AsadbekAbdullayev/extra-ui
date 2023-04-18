@@ -1,44 +1,18 @@
 import React, { useState, useRef } from 'react';
 import { Container, Icon, Selection } from './style';
-const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
-  let options = [
-    {
-      id: 1,
-      name: 'Option 1',
-      value: 'value1',
-    },
-    {
-      id: 2,
-      name: 'Option 2',
-      value: 'value2',
-    },
-    {
-      id: 3,
-      name: 'Option 3',
-      value: 'value3',
-    },
-    {
-      id: 3,
-      name: 'Option 3',
-      value: 'value3',
-    },
-    {
-      id: 3,
-      name: 'Option 3',
-      value: 'value3',
-    },
-    {
-      id: 3,
-      name: 'Option 3',
-      value: 'value3',
-    },
-  ];
-
+const Dropdown = ({
+  onClick,
+  width,
+  margin,
+  icon,
+  disabled,
+  options,
+  title,
+}) => {
   const selectRef = useRef('');
   const [open, setOpen] = useState(false);
-  const onClick2 = (e) => {
+  const onClick2 = () => {
     onClick && onClick();
-    selectRef.current.focus();
     setOpen(!open);
   };
 
@@ -61,29 +35,33 @@ const Dropdown = ({ onClick, width, margin, icon, disabled }) => {
       width={width}
       margin={margin}
       disabled={disabled}
+      tabIndex={0}
+      onBlur={onBlur}
     >
-      {val ? val : 'Select'}
+      {val ? val : title ? title : 'Select'}
       <Selection
         open={open}
         onClick={(e) => onClickSelection(e)}
-        tabIndex={0}
-        onBlur={onBlur}
         ref={selectRef}
-        count={options.length}
-        // onMouseLeave={() => setOpen(false)}
       >
-        {options.map(({ name, id }) => {
-          return (
-            <Selection.Item
-              open={open}
-              key={id}
-              onClick={() => onClickItem(name, id)}
-              active={select === id}
-            >
-              {name}
-            </Selection.Item>
-          );
-        })}
+        {options?.length > 0 ? (
+          options.map(({ name, id }) => {
+            return (
+              <Selection.Item
+                open={open}
+                key={id}
+                onClick={() => onClickItem(name, id)}
+                active={select === id}
+              >
+                {name}
+              </Selection.Item>
+            );
+          })
+        ) : (
+          <Selection.Item1 onClick={() => setOpen(false)}>
+            No data
+          </Selection.Item1>
+        )}
       </Selection>
       <Container.Icon className='IconCon' icon={icon}>
         {icon ? (

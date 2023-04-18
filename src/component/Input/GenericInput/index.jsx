@@ -7,11 +7,15 @@ const GenericInput = ({
   placeholder,
   danger,
   disabled,
+  success,
   height,
   width,
   value,
   padding,
   margin,
+  color,
+  placeholderColor,
+  type,
 }) => {
   const [mouse, setMouse] = useState(false);
   const [blur, setBlur] = useState(false);
@@ -27,6 +31,8 @@ const GenericInput = ({
       active={mouse ? mouse : blur}
       focus={blur}
       padding={padding}
+      danger={danger}
+      success={success}
     >
       {suffix && (
         <Icon height={height} margin={margin}>
@@ -41,6 +47,11 @@ const GenericInput = ({
         onFocus={() => setBlur(true)}
         onBlur={() => setBlur(false)}
         active={mouse ? mouse : blur}
+        danger={danger}
+        success={success}
+        color={color}
+        placeholderColor={placeholderColor}
+        type={type}
       />
       {prefix && (
         <Icon height={height} margin={margin}>

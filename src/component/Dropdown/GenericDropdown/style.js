@@ -51,7 +51,7 @@ Icon.Down = styled(Down)`
 Container.Icon = styled.div`
   width: 40px;
   height: 100%;
-  border: ${({ icon }) => icon && '1px solid #d9d9d9'};
+  border-left: ${({ icon }) => icon && '1px solid #d9d9d9'};
   /* border-radius: ${({ icon }) => icon && '0 6px 6px 0'}; */
   position: absolute;
   right: -1px;
@@ -59,13 +59,13 @@ Container.Icon = styled.div`
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+  cursor: pointer;
 `;
 
 export const Selection = styled.div`
   transition: all 0.3s;
   max-height: ${({ open }) => (open ? '150px' : '0px')};
-  display: ${({ open }) => (open ? 'block' : 'none')};
-  transition: all 3s;
+  transition: all 0.2s;
   background-color: #fff;
   position: absolute;
   user-select: none;
@@ -75,13 +75,26 @@ export const Selection = styled.div`
   top: 45px;
   left: -1px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: none;
   overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background-color: #ccc;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: inherit;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+  }
 `;
 
 Selection.Item = styled.div`
-  height: ${({ open }) => (open ? '40px' : '0px')};
+  height: 40px;
   transition: height 0.3s;
-  display: ${({ open }) => (open ? 'block' : 'none')};
   z-index: 99;
 
   user-select: none;
@@ -97,7 +110,17 @@ Selection.Item = styled.div`
     font-weight: 650;
   }
 `;
-Selection.Item1 = styled.input`
+
+Selection.Item1 = styled.div`
   height: 40px;
+  transition: height 0.3s;
+  z-index: 99;
+
   user-select: none;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  background-color: ${({ active }) => active && '#f0f0f0'};
+  font-weight: ${({ active }) => active && '650'};
 `;
