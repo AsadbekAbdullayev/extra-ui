@@ -14,7 +14,8 @@ Container.Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: ${({ active }) => (active ? '2px solid #74ade1' : '1px solid#d9d9d9')};
+  border: ${({ active }) =>
+    active ? '2px solid #74ade1' : '1px solid#d9d9d9'};
   background-color: #fff;
   color: ${({ active }) => (active ? '#74ade1' : '#000')};
   & svg {
@@ -24,7 +25,8 @@ Container.Item = styled.div`
   }
   cursor: pointer;
   :hover {
-    border:${({ disabled,active }) => (!disabled && active) ? '2px solid #74ade1' : '1px solid #74ade1'};
+    border: ${({ disabled, active }) =>
+      !disabled && active ? '2px solid #74ade1' : '1px solid #74ade1'};
     color: ${({ disabled }) => !disabled && '#74ade1'};
     user-select: none;
     & svg {
@@ -35,6 +37,7 @@ Container.Item = styled.div`
   }
   transition: all 0.1s;
   cursor: ${({ disabled }) => (!disabled ? 'pointer' : 'not-allowed')};
+  border-radius: 4px;
 `;
 
 export const Icon = styled.div``;
