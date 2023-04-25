@@ -13,6 +13,7 @@ import Carousel from '../component/Carousel';
 import Input from '../component/Input';
 import Steps from '../component/Steps';
 import Checkbox from '../component/Checkbox';
+import Form from '../component/Form';
 import Generic from '../view/generic';
 export const SidebarData = [
   {
@@ -86,7 +87,7 @@ export const SidebarData = [
     path: '/Form',
     name: 'Form',
     child: [],
-    Component: Generic,
+    Component: Form,
   },
 
   {
@@ -121,7 +122,7 @@ export const SidebarData = [
   {
     id: 15,
     path: '/Upload',
-    name: 'Upload',
+    name: 'Image Uploader',
     child: [],
     Component: Uploader,
   },

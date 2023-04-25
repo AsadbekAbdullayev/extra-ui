@@ -5,7 +5,12 @@ export const Container = styled.div`
   // width:100%;
   height: 40px;
   display: flex;
-  gap: 4px;
+  gap: 5px;
+`;
+Container.Flex = styled.div`
+display: flex;
+align-items:center;
+gap:5px;
 `;
 
 Container.Item = styled.div`
@@ -37,6 +42,15 @@ Container.Item = styled.div`
   cursor: ${({ disabled }) => (!disabled ? 'pointer' : 'not-allowed')};
 `;
 
+
+Container.Item1 = styled.div`
+  width: 35px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  cursor: ${({ disabled }) => (!disabled ? 'pointer' : 'not-allowed')};
+`;
 export const Icon = styled.div``;
 
 Icon.Right = styled(Left)`

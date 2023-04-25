@@ -8,6 +8,21 @@ const Dropdown = () => {
       <Container.Flex>
         {/* 1 */}
         <Container.Column>
+        <Card
+            component={
+              <div
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                }}
+              >
+                <GenericPagination total={50} />
+              </div>
+            }
+            title={'Basic'}
+            desc={'The most basic dropdown menu.'}  
+          />
           <Card
             component={
               <div
@@ -23,6 +38,8 @@ const Dropdown = () => {
             title={'Page Counter'}
             desc={'The most basic dropdown menu.'}
           />
+
+          
 
           <Card
             component={
@@ -40,37 +57,8 @@ const Dropdown = () => {
             desc={'The most basic dropdown menu.'}
           />
 
-          <Card
-            component={
-              <div
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                }}
-              >
-                <GenericPagination total={50} />
-              </div>
-            }
-            title={'Basic'}
-            desc={'The most basic dropdown menu.'}
-          />
+        
 
-          <Card
-            component={
-              <div
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'flex-end',
-                }}
-              >
-                <GenericPagination total={50} />
-              </div>
-            }
-            title={'Basic'}
-            desc={'The most basic dropdown menu.'}
-          />
         </Container.Column>
       </Container.Flex>
     </Container>

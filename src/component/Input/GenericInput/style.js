@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: ${({ width }) => (width ? width : '400px')};
+  width: ${({ width }) => (width ? width : '100%')};
   height: ${({ height }) => (height ? height : '32px')};
   border: 1px solid
     ${({ active, danger, success }) =>
@@ -9,7 +9,7 @@ export const Container = styled.div`
   border-radius: 4px;
   transition: all 0.3s;
   outline: none;
-  margin: 0 5px 15px 5px;
+  margin: 0 5px 15px 0px;
   display: flex;
   padding: ${({ padding }) => (padding ? padding : '0 1px')};
 
@@ -22,6 +22,14 @@ export const Container = styled.div`
       : success
       ? '0px 0px 1px 1px rgba(168, 240, 200, 0.54)'
       : '0px 0px 1px 1px rgba(24, 147, 255, 0.54)')};
+`;
+
+Container.Wrap = styled.div`
+display: flex;
+flex-direction:column;
+gap:5px;
+font-size:15px;
+font-weight:600;
 `;
 
 Container.Input = styled.input`

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Container, Icon } from './style';
 
 const GenericInput = ({
@@ -15,19 +16,36 @@ const GenericInput = ({
   margin,
   color,
   placeholderColor,
+  header,
   type,
+  onChange,name,onBlur,
 }) => {
   const [mouse, setMouse] = useState(false);
   const [blur, setBlur] = useState(false);
   const [val, setVal] = useState(value);
-  return (
+  useEffect(()=>{setVal(value)},[value]);
+  
+  const onChangeFunction = (e)=>{
+    onChange && onChange(e);
+    setVal(e?.target?.value);
+
+  };
+  const onBlurFunction = (e)=>{
+    onBlur && onBlur(e);
+    setBlur(false)
+  };
+  return (  
+    <Container.Wrap>
+{
+  header && header
+}
     <Container
       width={width}
       height={height}
       onMouseOver={() => setMouse(true)}
       onMouseLeave={() => setMouse(false)}
       onFocus={() => setBlur(true)}
-      onBlur={() => setBlur(false)}
+      onBlur={onBlurFunction}
       active={mouse ? mouse : blur}
       focus={blur}
       padding={padding}
@@ -41,7 +59,7 @@ const GenericInput = ({
       )}
       <Container.Input
         value={val}
-        onChange={(e) => setVal(e?.target?.value)}
+        onChange={onChangeFunction}
         placeholder={placeholder}
         height={height}
         onFocus={() => setBlur(true)}
@@ -52,6 +70,7 @@ const GenericInput = ({
         color={color}
         placeholderColor={placeholderColor}
         type={type}
+        name={name}
       />
       {prefix && (
         <Icon height={height} margin={margin}>
@@ -59,6 +78,8 @@ const GenericInput = ({
         </Icon>
       )}
     </Container>
+    </Container.Wrap>
+
   );
 };
 

@@ -16,7 +16,10 @@ const Button = () => {
           <Card
             component={
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                <GenericInput placeholder={'Basic usage'} />
+                <GenericInput placeholder={'Basic usage'}
+                  width='400px'
+                
+                />
               </div>
             }
             title={'Basic usage '}
@@ -29,7 +32,9 @@ const Button = () => {
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 <GenericInput
                   height={'40px'}
-                  placeholder={'large size'}
+                  placeholder={'large size'}  
+                  width='400px'
+
                   danger='true'
                   placeholderColor={'rgba(255, 36, 37, 0.4)'}
                   color={'#ff2425'}
@@ -44,6 +49,8 @@ const Button = () => {
                 <GenericInput
                   height={'32px'}
                   placeholder={'default size'}
+                  width='400px'
+
                   danger='true'
                   placeholderColor={'rgba(255, 36, 37, 0.4)'}
                   color={'#ff2425'}
@@ -57,6 +64,8 @@ const Button = () => {
                 />
                 <GenericInput
                   height={'24px'}
+                  width='400px'
+
                   placeholder={'small size'}
                   danger='true'
                   placeholderColor={'rgba(255, 36, 37, 0.4)'}
@@ -83,6 +92,8 @@ const Button = () => {
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 <GenericInput
                   height={'40px'}
+                  width='400px'
+
                   placeholder={'large size'}
                   type={show ? 'string' : 'password'}
                   prefix={
@@ -107,6 +118,8 @@ const Button = () => {
                 />
                 <GenericInput
                   height={'32px'}
+                  width='400px'
+
                   placeholder={'default size'}
                   type={show1 ? 'string' : 'password'}
                   prefix={
@@ -131,6 +144,8 @@ const Button = () => {
                 />
                 <GenericInput
                   height={'24px'}
+                  width='400px'
+
                   placeholder={'small size'}
                   type={show2 ? 'string' : 'password'}
                   prefix={
@@ -168,6 +183,8 @@ const Button = () => {
                   padding='0 0 0 1px'
                   margin='0'
                   height={'40px'}
+                  width='400px'
+
                   prefix={
                     <Container.Prefix1 style={{ width: '70px' }}>
                       Search
@@ -179,6 +196,8 @@ const Button = () => {
                   padding='0 0 0 1px'
                   margin='0'
                   height={'32px'}
+                  width='400px'
+
                   prefix={
                     <Container.Prefix1>
                       <SearchIcon height={'20px'} width={'20px'} />
@@ -189,6 +208,8 @@ const Button = () => {
                   placeholder={'input search text'}
                   padding='0 0 0 1px'
                   margin='0'
+                  width='400px'
+
                   height={'24px'}
                   prefix={
                     <Container.Prefix1>
@@ -210,17 +231,22 @@ const Button = () => {
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 <GenericInput
                   height={'40px'}
+                  width='400px'
                   placeholder={'large size'}
                   suffix={<User1Icon color='#000' />}
                 />
                 <GenericInput
                   height={'32px'}
+                  width='400px'
+
                   placeholder={'default size'}
                   suffix={<User1Icon color='#000' />}
                 />
                 <GenericInput
                   height={'24px'}
                   placeholder={'small size'}
+                  width='400px'
+
                   suffix={<User1Icon color='#000' />}
                 />
               </div>
@@ -239,6 +265,8 @@ const Button = () => {
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 <GenericInput
                   height={'40px'}
+                  width='400px'
+
                   placeholder={'large size'}
                   success='true'
                   placeholderColor={'rgba(168, 240, 200, 0.54)'}
@@ -253,6 +281,8 @@ const Button = () => {
                 />
                 <GenericInput
                   height={'32px'}
+                  width='400px'
+
                   placeholder={'default size'}
                   success='true'
                   placeholderColor={'rgba(168, 240, 200, 0.54)'}
@@ -267,6 +297,8 @@ const Button = () => {
                 />
                 <GenericInput
                   height={'24px'}
+                  width='400px'
+
                   placeholder={'small size'}
                   success='true'
                   placeholderColor={'rgba(168, 240, 200, 0.54)'}
@@ -292,6 +324,8 @@ const Button = () => {
             component={
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 <GenericInput
+                  width='400px'
+
                   placeholder={'input search text'}
                   padding='0 0 0 1px'
                   margin='0'
@@ -315,6 +349,8 @@ const Button = () => {
                 />
                 <GenericInput
                   placeholder={'input search text'}
+                  width='400px'
+
                   padding='0 0 0 1px'
                   margin='0'
                   height={'32px'}
@@ -334,6 +370,8 @@ const Button = () => {
                 />
                 <GenericInput
                   placeholder={'input search text'}
+                  width='400px'
+
                   padding='0 0 0 1px'
                   margin='0'
                   height={'24px'}

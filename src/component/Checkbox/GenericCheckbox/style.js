@@ -3,8 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: fit-content;
   display: flex;
-  cursor: pointer;
+  cursor: ${({disabled})=>disabled ? 'not-allowed' :'pointer'};
   gap: 6px;
+  margin:5px;  
+  align-items:center;
+  color:${({disabled})=>disabled && '#c4c4c4'}
 `;
 Container.Checkbox = styled.input.attrs({ type: 'checkbox' })`
   display: none;
@@ -14,17 +17,17 @@ Container.Checkbox = styled.input.attrs({ type: 'checkbox' })`
 `;
 export const Icon = styled.svg`
   fill: none;
-  stroke: #1893ff;
+  stroke: #fff;
   stroke-width: 3px;
 `;
 export const StyledCheckbox = styled.div`
   position: relative;
-  width: 25px;
-  height: 25px;
-  border: 1px solid ${({ hover }) => (hover ? ' #1893ff' : '#d9d9d9')};
+  width:${({width})=>width ? width : '25px'};
+  height:${({height})=>height ? height : '25px'};
+  border: 1px solid ${({ hover,disabled }) => ((hover && !disabled) ? ' #1893ff' : '#d9d9d9')};
   transition: all 0.2s;
   border-radius: 2px;
-
+background-color:${({bgcolor,checked})=>(checked && bgcolor) ? bgcolor : checked ? '#1893ff' : '#fff'};
   :hover {
     border-color: #1893ff;
   }
@@ -37,5 +40,5 @@ export const StyledCheckbox = styled.div`
     }
   }
 
-  animation: ${({ active }) => active && 'pulse 0.3s '};
+  animation: ${({ active,disabled }) => !disabled && active && 'pulse 0.3s '};
 `;

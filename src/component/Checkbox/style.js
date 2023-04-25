@@ -8,5 +8,13 @@ export const Container = styled.div`
 `;
 
 Container.Flex = styled.div`
-  display: flex;
+display: flex;
+gap:45px;
 `;
+
+Container.Column = styled.div`
+width:100%;
+display: flex;
+flex-direction: column;
+`;
+

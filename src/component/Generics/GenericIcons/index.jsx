@@ -11,7 +11,7 @@ import { ReactComponent as Check } from '../../../assets/icon/check.svg';
 import { ReactComponent as Warning } from '../../../assets/icon/warning.svg';
 
 export const WarningIcon = styled(Warning)`
-  width: ${({ width }) => (width ? width : '15px')};
+  width: ${({ width }) => (width ? width : '20px')};
   height: ${({ height }) => (height ? height : 'var(--appTableIconSize)')};
   margin: ${({ margin }) => margin && margin};
   path {
