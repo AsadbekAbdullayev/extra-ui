@@ -53,7 +53,7 @@ const GenericSteps = ({ width, height }) => {
     setDanger(danger1);
   };
 
-  const styleInput = { position: 'absolute', top: '31px', right: '8px' };
+  const styleInput = { position: 'absolute', top: '28px', right: '8px' };
 
   return (
     <Wrap>
