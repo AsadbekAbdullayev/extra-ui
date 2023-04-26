@@ -9,6 +9,19 @@ import { ReactComponent as Search } from '../../../assets/icon/Search.svg';
 import { ReactComponent as Call } from '../../../assets/icon/call.svg';
 import { ReactComponent as Check } from '../../../assets/icon/check.svg';
 import { ReactComponent as Warning } from '../../../assets/icon/warning.svg';
+import { ReactComponent as Star } from '../../../assets/icon/star.svg';
+
+export const StarIcon = styled(Star)`
+  width: ${({ width }) => (width ? width : '25px')};
+  height: ${({ height }) => (height ? height : '25px')};
+  margin: ${({ margin }) => margin && margin};
+  path {
+    fill: ${({ color }) =>
+      color || 'var(--appTableCollapseHeaderColor)'} !important;
+  }
+  cursor: ${({ pointer }) => !pointer && 'pointer'};
+  transition: all 0.2s;
+`;
 
 export const WarningIcon = styled(Warning)`
   width: ${({ width }) => (width ? width : '20px')};

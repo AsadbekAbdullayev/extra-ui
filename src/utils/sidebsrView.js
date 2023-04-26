@@ -3,7 +3,7 @@
 //     trailer:{'create':true,'delete':true,'edit':true},
 //     truck:{'create':true,'delete':true,'edit':true}
 // };
-
+import Generic from '../view/generic';
 import Button from '../component/Button';
 import Dropdown from '../component/Dropdown';
 import Pagination from '../component/Pagination';
@@ -14,7 +14,8 @@ import Input from '../component/Input';
 import Steps from '../component/Steps';
 import Checkbox from '../component/Checkbox';
 import Form from '../component/Form';
-import Generic from '../view/generic';
+import Switch from '../component/Switch';
+import Rate from '../component/Rate';
 export const SidebarData = [
   {
     id: 1,
@@ -91,32 +92,19 @@ export const SidebarData = [
   },
 
   {
-    id: 10,
-    path: '/Radio',
-    name: 'Radio',
-    child: [],
-    Component: Generic,
-  },
-  {
     id: 11,
     path: '/Rate',
     name: 'Rate',
     child: [],
-    Component: Generic,
+    Component: Rate,
   },
-  {
-    id: 12,
-    path: '/Select',
-    name: 'Select',
-    child: [],
-    Component: Generic,
-  },
+
   {
     id: 13,
     path: '/Switch',
     name: 'Switch',
     child: [],
-    Component: Generic,
+    Component: Switch,
   },
 
   {
@@ -147,13 +135,7 @@ export const SidebarData = [
     child: [],
     Component: Generic,
   },
-  {
-    id: 19,
-    path: '/Popover',
-    name: 'Popover',
-    child: [],
-    Component: Generic,
-  },
+
   {
     id: 20,
     path: '/Segmented',
@@ -175,13 +157,7 @@ export const SidebarData = [
     Component: Generic,
     child: [],
   },
-  {
-    id: 23,
-    path: '/Alert',
-    name: 'Alert',
-    Component: Generic,
-    child: [],
-  },
+
   {
     id: 24,
     path: '/Message',

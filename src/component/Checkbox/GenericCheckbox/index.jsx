@@ -1,21 +1,29 @@
 import React, { useState, useRef } from 'react';
 import { Container, Icon, StyledCheckbox } from './style';
-import Button from '../../Button/GenericButton';
 import { useEffect } from 'react';
-const GenericCheckbox = ({ width, height, onClick, title,disabled,checked ,bgColor}) => {
+const GenericCheckbox = ({
+  width,
+  height,
+  onClick,
+  title,
+  disabled,
+  checked,
+  bgColor,
+}) => {
   const [active, setActive] = useState(false);
   const [check, setCheck] = useState(checked);
   const [mouse, setMouse] = useState(false);
   const checkboxRef = useRef();
-  useEffect(()=>setCheck(checked),[checked])
+  useEffect(() => setCheck(checked), [checked]);
   const onClick1 = () => {
-    if(!disabled){
-    onClick && onClick();
+    if (!disabled) {
+      onClick && onClick();
       setCheck(!check);
-    setActive(true);
-    setTimeout(() => {
-      setActive(false);
-    }, 500);}
+      setActive(true);
+      setTimeout(() => {
+        setActive(false);
+      }, 500);
+    }
   };
   return (
     <Container
@@ -24,11 +32,14 @@ const GenericCheckbox = ({ width, height, onClick, title,disabled,checked ,bgCol
       onMouseLeave={() => setMouse(false)}
       disabled={disabled}
     >
-      <StyledCheckbox active={active} 
-      hover={mouse} checked={check} 
-      width={width} height={height} 
-      disabled={disabled}
-      bgcolor={bgColor}
+      <StyledCheckbox
+        active={active}
+        hover={mouse}
+        checked={check}
+        width={width}
+        height={height}
+        disabled={disabled}
+        bgcolor={bgColor}
       >
         {check && (
           <Icon viewBox='0 0 24 24'>

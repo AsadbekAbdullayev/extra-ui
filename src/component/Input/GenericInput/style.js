@@ -25,11 +25,13 @@ export const Container = styled.div`
 `;
 
 Container.Wrap = styled.div`
-display: flex;
-flex-direction:column;
-gap:5px;
-font-size:15px;
-font-weight:600;
+  width: ${({ width }) => (width ? width : '100%')};
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 600;
 `;
 
 Container.Input = styled.input`
