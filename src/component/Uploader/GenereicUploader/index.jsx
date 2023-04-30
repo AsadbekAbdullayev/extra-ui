@@ -9,7 +9,6 @@ const GenericUploader = () => {
   const [imageData, setImageData] = useState([]);
   const [idImage, setIdImage] = useState(0);
   const [actionView, setActionView] = useState(false);
-  console.log(actionView, 'actionView');
   const setUrlFunc = (e, name) => {
     setIdImage(idImage + 1);
 

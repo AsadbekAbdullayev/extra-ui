@@ -16,6 +16,10 @@ import Checkbox from '../component/Checkbox';
 import Form from '../component/Form';
 import Switch from '../component/Switch';
 import Rate from '../component/Rate';
+import Card from '../component/Card';
+import Collapse from '../component/Collapse';
+import Table from '../component/Table';
+import Tooltip from '../component/Tooltip';
 export const SidebarData = [
   {
     id: 1,
@@ -114,47 +118,34 @@ export const SidebarData = [
     child: [],
     Component: Uploader,
   },
-  {
-    id: 16,
-    path: '/Badge',
-    name: 'Badge',
-    child: [],
-    Component: Generic,
-  },
+
   {
     id: 17,
     path: '/Card',
     name: 'Card',
     child: [],
-    Component: Generic,
+    Component: Card,
   },
   {
     id: 18,
     path: '/Collapse',
     name: 'Collapse',
     child: [],
-    Component: Generic,
+    Component: Collapse,
   },
 
-  {
-    id: 20,
-    path: '/Segmented',
-    name: 'Segmented',
-    child: [],
-    Component: Generic,
-  },
   {
     id: 21,
     path: '/Table',
     name: 'Table',
     child: [],
-    Component: Generic,
+    Component: Table,
   },
   {
     id: 22,
     path: '/Tooltip',
     name: 'Tooltip',
-    Component: Generic,
+    Component: Tooltip,
     child: [],
   },
 

@@ -89,7 +89,7 @@ export const NexrIcon = styled(Next)`
   }
   &:hover {
     path {
-      fill: ${({ hovercolor }) => hovercolor || 'var(--appIconHoverColor)'};
+      fill: ${({ hovercolor }) => hovercolor && hovercolor};
     }
   }
 `;
