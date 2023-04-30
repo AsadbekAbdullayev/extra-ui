@@ -21,7 +21,7 @@ const Steps = () => {
       <Container.Flex style={{ margin: '20px 0 0 0' }}>
         <Card
           component={<GenericSteps steps={steps} />}
-          title={'Switch Step'}
+          title={'Step'}
           desc={
             'Cooperate with the content and buttons, to represent the progress of a process.'
           }

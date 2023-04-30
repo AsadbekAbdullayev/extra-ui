@@ -20,6 +20,7 @@ import Card from '../component/Card';
 import Collapse from '../component/Collapse';
 import Table from '../component/Table';
 import Tooltip from '../component/Tooltip';
+import Progress from '../component/Progress';
 export const SidebarData = [
   {
     id: 1,
@@ -167,7 +168,7 @@ export const SidebarData = [
     id: 26,
     path: '/Progress',
     name: 'Progress',
-    Component: Generic,
+    Component: Progress,
     child: [],
   },
 

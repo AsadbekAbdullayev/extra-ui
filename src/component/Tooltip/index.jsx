@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from './style';
 import Card from '../cardDetails';
 import GenericTooltip from './GenericTooltip';
-import Button from '../Button/GenericButton';
 const Tooltip = () => {
   const style = {
     width: '70px',

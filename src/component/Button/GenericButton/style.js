@@ -92,6 +92,7 @@ const getColor = ({ type, Danger, Ghost, disabled }) => {
 
 export const Container = styled.div`
   color: ${getColor};
+  text-align:center;
   border-radius: ${({ shape }) => {
     if (shape === 'circle') {
       return '50%';
@@ -295,6 +296,7 @@ export const Container = styled.div`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   transition: all 0.3s;
   user-select: none;
+  justify-content: center;
 `;
 
 Container.Title = styled.div`

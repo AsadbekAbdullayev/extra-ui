@@ -3,7 +3,6 @@ import { Container } from './style';
 import Card from '../cardDetails';
 import CustomTable from '../CustomTable';
 import { column } from './header';
-import Button from '../Button/GenericButton';
 const Steps = () => {
   const Data = [
     {
