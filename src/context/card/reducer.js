@@ -1,5 +1,6 @@
 export const initialState = {
     selected: [],
+    
     cards:[
         {
           id:1,
