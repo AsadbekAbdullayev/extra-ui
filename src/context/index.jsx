@@ -4,8 +4,6 @@ import {SettingsProvider} from './Settings';
 
 function MainContextProvider({ children }) {
   return (
-
-
     
     
     <ZoneContextProvider>
